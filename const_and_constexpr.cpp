@@ -9,3 +9,5 @@ double sum(const vector<double>&); // sum will not modify its argument
 vector<double> v {1.2, 3.4, 4.5}; // v is not a constant
 const double s1 = sum(v); // OK: evaluated at run time
 constexpr double s2 = sum(v); // error: sum(v) not a constant expression
+
+constexpr double square(double x) { return x*x; } // function usable in constant expression needs to be defined by constexpr
